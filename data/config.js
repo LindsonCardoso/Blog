@@ -1,5 +1,6 @@
 const config = {
-  siteTitle: 'CodeStack Brasil', 
+  siteTitle: 'Lincal.dev', 
+  siteAuthor: 'Lindson',
   siteDescription: 'O melhor blog de programação do Brasil tem nome, é CodeStack.', 
   siteTitleShort: 'CodeStack BR', 
   siteRss: "/rss.xml",

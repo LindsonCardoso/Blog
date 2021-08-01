@@ -1,0 +1,66 @@
+.bio {
+
+    position: sticky;
+    top: 2em;
+    width: var(--bioWidth);
+    padding: 1.5em;
+    font-size: 15.5px;
+    background: var(--blackLight);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+}   
+
+@media screen and (max-width: var(--large)) {
+    .bio{
+    position: relative;
+    margin: 2em 0;
+    width: 100%;
+    }
+  }
+
+  
+  @media screen and (max-width: var(--smal)) {
+      .bio{
+    padding: 1.3em 1em;
+    }
+  }
+
+
+
+  .bioHeader {
+
+    display: flex;
+    align-items: center;
+    
+  }
+
+
+  .bioHeader img{
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .bioName {
+    margin-left: 10px;
+  }
+
+  .bioName a{
+     font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 1.3em;
+      color: #fff;
+  
+  }
+
+
+  .bioMain{
+    margin-top: 1em;
+  }
+
+  .bioDescription {
+    color: #fff;
+    font-size: 0.92em;
+  }

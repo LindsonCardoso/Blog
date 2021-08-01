@@ -1,11 +1,18 @@
 import React from 'react';
-import { Header } from '../Header/Header';
-import { Sidebar } from '../Sidebar/Sidebar';
+
+//import components
+import { Header    } from '../Header/Header';
+//import { Sidebar   } from '../Sidebar/Sidebar';
 import { Container } from '../Container/Container';
+import { Bio       } from '../Bio';
+
+//import libres..
 import Helmet from 'react-helmet';
 import favicon from '../../../static/favicon.png';
 import config from '../../../data/config';
-import './Layout.css';
+
+//import styles..
+import '../../styles/global.css';
 
 export const Layout = ({ children }) => {
  
@@ -21,8 +28,7 @@ export const Layout = ({ children }) => {
       <Container>
         {children}
         <aside className="aside">
-          <Sidebar title="Sobre mim" description="Sou um desenvolvedor apaixonado por JavaScript e amo desenvolver produtos que melhoram a vida das pessoas."/>
-          <Sidebar title="Sobre o blog" description="Aqui você encontará muito conteúdo de FrontEnd e CSS, além de umas dicas senasacionais de carreira!"/>
+          <Bio author={config.siteAuthor} title="Lindson" description="Sou um desenvolvedor apaixonado por JavaScript e amo desenvolver produtos que melhoram a vida das pessoas."/>
         </aside>
       </Container>
     </main>

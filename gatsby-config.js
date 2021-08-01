@@ -1,14 +1,24 @@
 const config = require("./data/config");
+const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
+    author: config.siteAuthor,
     description: config.siteDescription,
     siteUrl: config.siteUrl
   },
   plugins: [
     "gatsby-plugin-catch-links",
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `static`, `images`),
+      },
+    },
+
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -23,6 +33,7 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: config.siteTitle,
+        author: config.siteAuthor,
         short_name: config.siteTitleShort,
         description: config.siteDescription,
         start_url: '/',
@@ -46,6 +57,7 @@ module.exports = {
             site {
               siteMetadata {
                 title
+                author
                 description
                 siteUrl
               }
@@ -78,6 +90,7 @@ module.exports = {
                       html
                       fields { slug }
                       frontmatter {
+                        author
                         title
                         date
                       }
